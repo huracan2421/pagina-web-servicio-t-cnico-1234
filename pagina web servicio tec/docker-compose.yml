@@ -1,0 +1,28 @@
+name: nova-digital
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+    image: nova-digital:latest
+    container_name: nova-digital-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    networks:
+      - nova-network
+    environment:
+      - TZ=UTC
+
+networks:
+  nova-network:
+    driver: bridge

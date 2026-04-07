@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Servicio Técnico Computación 1234</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+  <div class="logo-container">
+    <img src="images/edubecam.png" alt="Logo" class="nav-logo">
+    <h2><a href="index.html">Servicio Técnico Computación 1234</a></h2>
+  </div>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Nosotros</a></li>
+    <li><a href="services.html">Servicios</a></li>
+    <li><a href="portfolio.html">Portafolio</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <div class="contenedor-contacto">
+    
+    <!-- Lado izquierdo: Imagen + Datos de contacto -->
+    <div class="contacto-info">
+      <img src="images/8102780.png" alt="Contacto" class="icono-grande">
+      
+      <div class="info-contacto">
+        <h3>Ejecutivo de Ventas</h3>
+        <p><strong>Eduardo H.</strong></p>
+        <p>Eduardo.h@gmail.com</p>
+        <p>+569 0023 3546</p>
+
+        <h3>Administrador</h3>
+        <p><strong>Betsabe M.</strong></p>
+        <p>Betsabe.M@ejemplo.com</p>
+        <p>+569 1234 5678</p>
+
+        <h3>Director</h3>
+        <p><strong>Camila R.</strong></p>
+        <p>Camila.R@ejemplo.com</p>
+        <p>+569 8765 4321</p>
+      </div>
+    </div>
+
+    <!-- Lado derecho: Formulario con imagen de fondo -->
+    <div class="contenedor-formulario">
+  <h2>Envíanos un mensaje</h2>
+  
+  <form action="#" method="POST" id="contactForm">
+    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Tu número de teléfono 9 1234 1234">
+    <textarea name="mensaje" rows="6" placeholder="¿En qué te podemos ayudar? Cuéntanos..." required></textarea>
+    
+    <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
+
+<div id="status"></div>
+</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
